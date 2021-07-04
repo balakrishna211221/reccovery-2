@@ -1,0 +1,15 @@
+apiVersion: extention/v1beta1
+kind: Ingress
+metadata:
+  name: deploy1
+spec:
+  rules:
+  - host: "balu.aloneliup.xyz"   # give dommain
+    http:
+      paths:
+      - path: "/"   # give path
+        backend:
+          service:
+            name: deploy1  # give service name
+            port:
+              number: 5000  # give service port
